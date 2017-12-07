@@ -1,3 +1,9 @@
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:tomcat.keystore
+    key-store-password: 123456
+    keyAlias: tomcat
 ## 数据源配置
 spring:
   datasource:
@@ -7,3 +13,6 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
+

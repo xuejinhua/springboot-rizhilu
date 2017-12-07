@@ -1,9 +1,10 @@
 package com.demo.repository;
 
-import com.demo.entity.Customer;
+import com.demo.entity.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
+public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {
+    UserInfo findByOpenIdLike(String openid);
 }

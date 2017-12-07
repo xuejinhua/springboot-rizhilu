@@ -1,20 +1,20 @@
 package com.demo.controller;
 
-import com.demo.entity.User;
-import com.demo.service.UserService;
+import com.demo.entity.UserInfo;
+import com.demo.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(name = "/user")
-public class UserController {
+@RequestMapping(name = "/userInfo")
+public class UserInfoController {
 
     @Autowired
-    private UserService userService;
+    private UserInfoService userInfoService;
 
-    @RequestMapping(name = "/login")
-    public String login(User user){
+    @RequestMapping(name = "/")
+    public String login(UserInfo userInfo){
         return "";
     }
 }

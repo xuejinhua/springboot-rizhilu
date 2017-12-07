@@ -9,14 +9,9 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 用户实体类
- * <p>
- * Created by bysocket on 21/07/2017.
- */
-@Entity(name = "T_CUSTOMER")
+@Entity(name = "T_USER_INFO")
 @Data
-public class Customer implements Serializable {
+public class UserInfo implements Serializable {
     /**
      * 编号
      */
@@ -58,7 +53,7 @@ public class Customer implements Serializable {
      */
     private String country;
     /**
-     * 手机号
+     * 头像地址
      */
     @Column(name = "AVATAR_URL")
     private String avatarUrl;
@@ -72,5 +67,6 @@ public class Customer implements Serializable {
      */
     @Column(name = "OPEN_ID")
     private String openId;
-
+    @Column(name = "session_key")
+    private String sessionKey;
 }
